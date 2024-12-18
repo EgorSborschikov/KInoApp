@@ -4,14 +4,14 @@ const _primaryColor = Color.fromARGB(255, 205, 218, 27);
 
 const _textTheme = TextTheme(
   titleMedium: TextStyle(
-    fontSize: 20,
+    fontSize: 16,
     fontFamily: 'kokoro',
     fontWeight: FontWeight.w600,
   ),
   headlineLarge: TextStyle(
-    fontSize: 28,
-    fontFamily: 'kokoro',
-    fontWeight: FontWeight.w800,
+    fontSize: 22,
+    fontFamily: 'Ubuntu',
+    fontWeight: FontWeight.bold,
   )
 );
 
@@ -23,6 +23,7 @@ final darkTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
     seedColor: _primaryColor,
     brightness: Brightness.dark,
+    surface: Colors.black,
   ),
 );
 
