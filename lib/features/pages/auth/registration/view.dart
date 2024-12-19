@@ -1,0 +1,1 @@
+export 'package:kino_app/features/pages/auth/registration/register_page/register_page.dart';

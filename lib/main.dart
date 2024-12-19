@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kino_app/features/pages/auth/registration/register_page/register_page.dart';
+import 'package:kino_app/features/pages/auth/registration/view.dart';
 
 void main() {
   runApp(const KinoApp());
