@@ -1,16 +1,36 @@
-# kino_app
+# KinoApp
 
-A new Flutter project.
+Проект, созданный для подготовки к Всероссийскому чемпионату профессионального мастерства "Профессионалы" по компетенции "Разработка мобильных приложений"
 
-## Getting Started
+## Структура проекта
 
-This project is a starting point for a Flutter application.
+Структура проекта включает в себя распределение по веткам git-репозитория и использование архитектурных паттернов и приципов
 
-A few resources to get you started if this is your first Flutter project:
+### Паттерны проектипрования:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- MVVM (Model-View-ViewModel):
+    View: В каталоге features/components и features/pages есть файлы с суффиксом view, что указывает на представление (View).
+    ViewModel: В каталоге features/pages есть файлы, которые содержат логику представления (ViewModel), например, auth_page.dart, register_page.dart, и т.д.
+    Model: модели данных находятся в папке services/database .
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Repository:
+    Каталог services/repository указывает на использование паттерна Repository, который абстрагирует доступ к данным и предоставляет централизованное место для управления данными.
+
+- Singleton:
+    Каталог services/database использует паттерн Singleton для обеспечения единственного экземпляра базы данных.
+### Принципы SOLID
+
+- Single Responsibility Principle (SRP): Каждый каталог и файл имеют четко определенную ответственность. Например, features/components/ отвечают за виджеты, а features/pages/ — за страницы(экраны).
+- Open/Closed Principle (OCP): Структура проекта позволяет легко добавлять новые компоненты и страницы без изменения существующего кода.
+- Liskov Substitution Principle (LSP): Вероятно, используется в наследовании и полиморфизме.
+- Interface Segregation Principle (ISP): Компоненты и страницы реализуют специфические интерфейсы, что позволяет им быть более гибкими и легко заменяемыми.
+- Dependency Inversion Principle (DIP): Использование паттерна Repository и Dependency Injection для управления зависимостями.
+
+### Принцип DRY (Don't Repeat Yourself)
+- Повторяющиеся компоненты, такие как кнопки и текстовые поля, вынесены в отдельные файлы (general_button.dart, general_text_field.dart), что позволяет избежать    дублирования кода.
+
+### KISS (Keep It Simple, Stupid)
+- Структура проекта проста и понятна, что облегчает навигацию и поддержку кода.
+
+### Separation of Corners
+- Разделение кода на компоненты, страницы, сервисы и утилиты позволяет четко разграничить ответственность каждой части проекта.
