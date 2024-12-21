@@ -1,0 +1,1 @@
+export 'package:kino_app/features/components/bars/bottom_navigation_bar/general_bottom_navigation_bar/general_bottom_navigation_bar.dart';

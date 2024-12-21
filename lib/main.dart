@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:kino_app/features/pages/auth/registration/view.dart';
-
+import 'package:kino_app/features/components/bars/bottom_navigation_bar/view_bottom_navigation_bar.dart';
 import 'routes/app_router.gr.dart';
 
 void main() {
@@ -17,8 +16,9 @@ class KinoApp extends StatelessWidget {
     return CupertinoApp.router(
       routerDelegate: _appRouter.delegate(),
       routeInformationParser: _appRouter.defaultRouteParser(),
-      title: 'Kino',
-      debugShowCheckedModeBanner: false,
+      builder: (context, router) {
+        return CustomBottomNavigationBar();
+      },
     );
   }
 }

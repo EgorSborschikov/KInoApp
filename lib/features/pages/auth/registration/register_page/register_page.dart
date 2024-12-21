@@ -56,6 +56,7 @@ class RegisterPage extends StatelessWidget {
             GeneralButton(
               onPressed: () {
                 // Add your registration logic here
+                context.router.push(HomeRoute());
               },
               text: 'Register',
             ),
