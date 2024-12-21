@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:kino_app/features/pages/auth/registration/view.dart';
 
 void main() {
@@ -10,7 +10,7 @@ class KinoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return CupertinoApp(
       title: 'Kino',
       debugShowCheckedModeBanner: false,
       home: RegisterPage()

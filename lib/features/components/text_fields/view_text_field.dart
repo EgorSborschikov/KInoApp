@@ -1,1 +1,1 @@
-export 'general_text_field/general_text_field.dart';
+export 'package:kino_app/features/components/text_fields/general_text_field/general_text_field.dart';

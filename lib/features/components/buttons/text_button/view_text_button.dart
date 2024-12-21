@@ -1,0 +1,1 @@
+export 'package:kino_app/features/components/buttons/text_button/general_text_button/general_text_button.dart';
