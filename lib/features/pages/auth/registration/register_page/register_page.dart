@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:kino_app/features/components/text_fields/view_text_field.dart';
+import '../../../../../routes/app_router.gr.dart';
 import '../../../../components/buttons/button/view_button.dart';
-import '../../../../components/buttons/text_button/view_text_button.dart';
-import '../../../../components/text_fields/view_text_field.dart';
+import '../../../../components/buttons/text_button/view_text_button.dart'; // Import your generated router
 
 class RegisterPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
@@ -29,7 +31,9 @@ class RegisterPage extends StatelessWidget {
             const SizedBox(height: 20),
             Text(
               'Please, register in app',
-              style: CupertinoTheme.of(context).textTheme.navLargeTitleTextStyle,
+              style: CupertinoTheme.of(context).textTheme.navLargeTitleTextStyle.copyWith(
+                color: CupertinoColors.secondarySystemGroupedBackground,
+              ),
             ),
             const SizedBox(height: 20),
             GeneralTextField(
@@ -44,9 +48,9 @@ class RegisterPage extends StatelessWidget {
             const SizedBox(height: 20),
             GeneralTextButton(
               onPressed: () {
-
-              }, 
-              text: 'Have account? Log in'
+                context.router.push(AuthRoute());
+              },
+              text: 'Have account? Log in',
             ),
             const SizedBox(height: 20),
             GeneralButton(

@@ -1,0 +1,1 @@
+export 'package:kino_app/features/pages/auth/authorization/auth_page/auth_page.dart';
