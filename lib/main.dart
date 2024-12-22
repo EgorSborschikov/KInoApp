@@ -19,6 +19,7 @@ class KinoApp extends StatelessWidget {
       builder: (context, router) {
         return CustomBottomNavigationBar();
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }

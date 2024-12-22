@@ -52,16 +52,17 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             label: 'Films',
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.settings),
-            label: 'Properties',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.placemark),
             label: 'Theatres',
+          ),
+                    BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.settings),
+            label: 'Settings',
           ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
+        activeColor: CupertinoColors.systemYellow,
       ),
       tabBuilder: (BuildContext context, int index) {
         return CupertinoTabView(
